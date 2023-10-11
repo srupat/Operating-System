@@ -29,7 +29,7 @@ void enqueue(struct queue * q,int val)
 {
     if(isFullq(q))
     {
-        printf("This queue is full\n");
+        // printf("This queue is full\n");
     }
     else{
         q->r++;
@@ -41,7 +41,7 @@ int dequeue(struct queue * q)
     int a=-1;
     if(isEmptyq(q))
     {
-        printf("Cannot dequeue, queue is empty\n");
+        // printf("Cannot dequeue, queue is empty\n");
     }
     else{
         q->f ++;
@@ -58,6 +58,7 @@ int check_queue(struct queue * q, int x)
     }
     return 0;
 }
+
 int main()
 {
     char str[20];
@@ -81,7 +82,7 @@ int main()
         // if element is not present but queue is full, first dequeue and then enqueue
         // if element is present and queue is full, do nothing
         // if element is present and queue is not full, do nothing       
-        if(check_queue(&q, str[i])) printf("hit\n");
+        if(check_queue(&q, str[i])) printf("Hit\n");
         else
         {
             if(!isFullq) enqueue(&q, str[i]);
