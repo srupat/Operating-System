@@ -51,7 +51,8 @@ void find_waiting_time(int processes[], int n, int burst_time[], int waiting_tim
 
         remaining_time[shortest]--;
 
-        if (remaining_time[shortest] == 0) {
+        if (remaining_time[shortest] == 0) 
+        {
             complete++;
             completed[shortest] = true;
             int finish_time = current_time + 1;

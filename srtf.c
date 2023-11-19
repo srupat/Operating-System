@@ -2,7 +2,8 @@
 #include<stdlib.h>
 #include<stdbool.h>
 
-void find_waiting_time(int processes[], int n, int burst_time[], int waiting_time[], int arrival_time[]) {
+void find_waiting_time(int processes[], int n, int burst_time[], int waiting_time[], int arrival_time[]) 
+{
     int *remaining_time = (int *)malloc(n * sizeof(int));
     bool *completed = (bool *)malloc(n * sizeof(bool));
 
@@ -17,14 +18,16 @@ void find_waiting_time(int processes[], int n, int burst_time[], int waiting_tim
         int shortest = -1;
         int min = 9999;
 
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < n; j++)         
+        {
             if (arrival_time[j] <= current_time && !completed[j] && remaining_time[j] < min) {
                 min = remaining_time[j];
                 shortest = j;
             }
         }
 
-        if (shortest == -1) {
+        if (shortest == -1) 
+        {
             current_time++;
             continue;
         }

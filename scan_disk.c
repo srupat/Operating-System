@@ -7,7 +7,7 @@ int main() {
     printf("Enter the number of disk requests: ");
     scanf("%d", &n);
 
-    int request_queue[n];
+    int *request_queue= (int*)malloc(sizeof(int)*n);
 
     printf("Enter the disk requests:\n");
     for (int i = 0; i < n; i++) {
